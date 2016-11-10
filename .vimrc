@@ -284,6 +284,7 @@ let g:tagbar_sort = 0
 let g:tagbar_width = 30
 let g:tagbar_zoomwidth = 0
 let g:tagbar_autofocus = 1
+let g:tagbar_left = 1
 
 inoremap <silent><c-w><c-t> <esc>:TagbarToggle<cr>
 nnoremap <silent><c-w><c-t> :TagbarToggle<cr>
@@ -295,7 +296,7 @@ nnoremap <silent><c-w><c-a> :TagbarOpen<cr>:NERDTree<cr>
 """"""""""""""""""""""""""""""
 let NERDTreeIgnore = ['\.[oda]$', 'cscope', 'tags', '\.so$', '\.pdf$']
 let NERDTreeShowBookmarks = 1
-let NERDTreeWinPos = "left"
+let NERDTreeWinPos = "right"
 let NERDTreeHighlightCursorline = 0
 let NERDTreeDirArrows = 1
 noremap  <silent><c-w><c-n> :NERDTreeToggle<cr>
