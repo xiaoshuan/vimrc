@@ -167,9 +167,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'Rip-Rip/clang_complete'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'SirVer/ultisnips'
 Plugin 'xiaoshuan/syntax.vim'
@@ -190,38 +188,24 @@ let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
 
 
 """"""""""""""""""""""""""""""
-" neocomplete
-""""""""""""""""""""""""""""""
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#auto_completion_start_length = 3
-let g:neocomplete#enable_ignore_case = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#enable_camel_case = 1
-
-""""""""""""""""""""""""""""""
-" clang complete
-""""""""""""""""""""""""""""""
-let g:clang_library_path = '/usr/lib/x86_64-linux-gnu/libclang-3.8.so.1'
-
-""""""""""""""""""""""""""""""
 " ycm
 """"""""""""""""""""""""""""""
-" let g:ycm_auto_start_csharp_server = 0
-" let g:ycm_min_num_identifier_candidate_chars = 2
-" let g:ycm_open_loclist_on_ycm_diags = 1
-" let g:ycm_key_list_select_completion = ['<c-n>']
-" let g:ycm_key_list_previous_completion = ['<c-p>']
-" let g:ycm_key_invoke_completion = '<c-x><c-m>'
-" let g:ycm_use_ultisnips_completer = 0
-" let g:ycm_global_ycm_extra_conf = '~/Libraries/utilities/ycm/.ycm_extra_conf.py'
-" let g:ycm_filetype_blacklist = {
-      " \ 'tex' : 1,
-      " \ 'text' : 1,
-      " \ 'html' : 1,
-      " \ 'xhtml' : 1
-      " \ }
-" nnoremap <c-c><c-l> :YcmDiags<CR>
-" nnoremap <leader>jd :YcmCompleter GoTo<CR>
+let g:ycm_auto_start_csharp_server = 0
+let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_open_loclist_on_ycm_diags = 1
+let g:ycm_key_list_select_completion = ['<c-n>']
+let g:ycm_key_list_previous_completion = ['<c-p>']
+let g:ycm_key_invoke_completion = '<c-x><c-m>'
+let g:ycm_use_ultisnips_completer = 0
+let g:ycm_global_ycm_extra_conf = '~/Libraries/utilities/ycm/.ycm_extra_conf.py'
+let g:ycm_filetype_blacklist = {
+      \ 'tex' : 1,
+      \ 'text' : 1,
+      \ 'html' : 1,
+      \ 'xhtml' : 1
+      \ }
+nnoremap <c-c><c-l> :YcmDiags<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 """"""""""""""""""""""""""""""
 " CtrlP
