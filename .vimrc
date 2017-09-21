@@ -190,6 +190,7 @@ let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
 """"""""""""""""""""""""""""""
 " ycm
 """"""""""""""""""""""""""""""
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_start_csharp_server = 0
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_open_loclist_on_ycm_diags = 1
@@ -250,6 +251,7 @@ command! -nargs=0 -range TD exe '<line1>,<line2>Tab /='
 """""""""""""""""""""""""""""""""""""""""
 nmap <leader>ca <plug>NERDCommenterAppend
 nmap <leader>cA <plug>NERDCommenterAltDelims
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """""""""""""""""""""""""""""""""""""""""
 " ctags
