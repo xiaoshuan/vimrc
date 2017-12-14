@@ -1,13 +1,13 @@
 """"""""""""""""""""""""""""""""
 "        yukai's vimrc
 """"""""""""""""""""""""""""""""
-" 使用非兼容模式
+" No-Compatible
 set nocompatible
 
 " Remove ALL autocommands for the current group.
 autocmd!
 
-" session
+" Session
 set sessionoptions+=resize
 
 " Do not redraw, when running macros.. lazyredraw
@@ -20,45 +20,42 @@ set cmdheight=2
 " Set magic on
 set magic
 
-" viminfo
-set viminfo+=%
-
 " Leader setting
 let g:mapleader=","
 
-" 文字编码模式
+" Encoding
 set fencs=utf-8,euc-cn,latin1
 
-" about search
+" About search
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 
-" show cmd when input
+" Show cmd when input
 set noshowcmd
 set showmode
 
-" histroy
+" Histroy
 set history=200
 
-" autoload when other sofeware modify the file
+" Autoload when other sofeware modify the file
 set autoread
 
-" allow buffers to be hidden when switch to another buffer
+" Allow buffers to be hidden when switch to another buffer
 set hidden
 
-" set backspace
+" Set backspace
 set backspace=indent,eol,start
 set whichwrap=b,s,>,<,[,]
 
-" 语法高亮
+" High-lighting
 syntax enable
 syntax on
 set wildmenu
 set sm
 
-" set colors and font
+" Colors and font
 set t_Co=256
 colorscheme desert
 set background=dark
@@ -81,48 +78,48 @@ set noerrorbells
 set novisualbell
 set vb t_vb=
 
-" tab
+" Tab
 set smarttab
 set tabstop=4
 set expandtab
 
-" auto indent
+" Auto indent
 set shiftwidth=4
 set autoindent
 set cindent
 set nowrap
 
-" show line number
+" Show line number
 set number
 set showmatch
 
-" set line
+" Set line
 set textwidth=200
 set linebreak
 set fo+=mB
 set iskeyword+=_,$,@,%,#,-  "Don't break the words with following character
 
-" show cur pos
+" Show cur pos
 set ruler
 set selection=inclusive
 
-" 上下移动时留三行
+" Redundant lines
 set so=3
 
-" 备份和缓存
+" No swap file
 set noswapfile
 
-" file type
+" File type
 set fileformats=unix,dos,mac
 
-" backup
+" No backup
 set nobackup
 set nowritebackup
 
-" auto complete
+" Auto complete
 set completeopt=longest,menu
 
-" indent set autoindent
+" Indent set autoindent
 set cino=:0g0t0(susj1
 
 
@@ -157,6 +154,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'CharTab'
 Plugin 'genutils'
+Plugin 'othree/xml.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'vimwiki/vimwiki'
 Plugin 'kien/ctrlp.vim'
@@ -169,6 +167,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'gabrielelana/vim-markdown'
 Plugin 'SirVer/ultisnips'
 Plugin 'xiaoshuan/syntax.vim'
 Plugin 'xiaoshuan/showmarks.vim'
@@ -181,10 +180,10 @@ filetype plugin indent on
 " vimwiki
 """"""""""""""""""""""""""""""
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
-    \ 'path_html': '~/Documents/vimwiki/html/',
-    \ 'template_path': '~/Documents/vimwiki/template/',
-    \ 'template_default': 'template',
-    \ 'template_ext': '.html'}]
+    \ 'path_html': '~/Documents/vimwiki/html/'}]
+
+command! -nargs=0 Vth exe 'Vimwiki2HTML'
+command! -nargs=0 Vbh exe 'Vimwiki2HTMLBrowse'
 
 
 """"""""""""""""""""""""""""""
