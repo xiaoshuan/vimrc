@@ -20,6 +20,9 @@ set cmdheight=2
 " Set magic on
 set magic
 
+" No viminfo
+set viminfo=""
+
 " Leader setting
 let g:mapleader=","
 
@@ -122,6 +125,8 @@ set completeopt=longest,menu
 " Indent set autoindent
 set cino=:0g0t0(susj1
 
+" ignore list
+set wildignore+=*.o,*.a,*.so,*.lib,*.exe,*.dll,*.lib,moc*.cpp,ui_*.h,*.pro,*.out,*.user,tags
 
 """""""""""""""""""""""""""""""""""""""""
 "            for convenient
@@ -182,9 +187,11 @@ filetype plugin indent on
 let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
     \ 'path_html': '~/Documents/vimwiki/html/'}]
 
+command! -nargs=0 Vdi exe 'VimwikiDiaryIndex'
+command! -nargs=0 Vgl exe 'VimwikiDiaryGenerateLinks'
+command! -nargs=0 Vus exe 'VimwikiUISelect'
 command! -nargs=0 Vth exe 'Vimwiki2HTML'
 command! -nargs=0 Vbh exe 'Vimwiki2HTMLBrowse'
-
 
 """"""""""""""""""""""""""""""
 " ycm
