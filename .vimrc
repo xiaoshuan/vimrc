@@ -319,8 +319,8 @@ hi ShowMarksHLu ctermbg=Magenta ctermfg=Black
 " ultisnips
 """"""""""""""""""""""""""""""
 command! -nargs=0 UE exe 'UltiSnipsEdit'
-set runtimepath+=~/Libraries/Ultisnips
-let g:UltiSnipsSnippetsDir = "~/Libraries/Ultisnips/ysnips"
+set runtimepath+=~/scripts/UltiSnips
+let g:UltiSnipsSnippetsDir = "~/scripts/UltiSnips/ysnips"
 let g:UltiSnipsSnippetDirectories = ["ysnips"]
 let g:UltiSnipsEditSplit = "context"
 let g:UltiSnipsExpandTrigger = "<tab>"
