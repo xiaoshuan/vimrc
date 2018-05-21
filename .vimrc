@@ -23,9 +23,6 @@ set magic
 " No viminfo
 set viminfo=""
 
-" Leader setting
-let g:mapleader=","
-
 " Encoding
 set fencs=utf-8,euc-cn,latin1
 
