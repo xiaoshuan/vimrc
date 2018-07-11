@@ -334,7 +334,7 @@ let g:LargFile=2
 """"""""""""""""""""""""""""""
 if has("cscope")
     set csprg=/usr/bin/cscope
-    set csto=1
+    set csto=0
     set cst
     set nocsverb
     " add ./cscope.out
