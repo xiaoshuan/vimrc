@@ -187,7 +187,9 @@ let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
 command! -nargs=0 Vdi exe 'VimwikiDiaryIndex'
 command! -nargs=0 Vgl exe 'VimwikiDiaryGenerateLinks'
 command! -nargs=0 Vus exe 'VimwikiUISelect'
+command! -nargs=* Vtb exe 'VimwikiTable <args>'
 command! -nargs=0 Vth exe 'Vimwiki2HTML'
+command! -nargs=0 Vah exe 'VimwikiAll2HTML'
 command! -nargs=0 Vbh exe 'Vimwiki2HTMLBrowse'
 
 """"""""""""""""""""""""""""""
@@ -288,6 +290,7 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeWinPos = "right"
 let NERDTreeHighlightCursorline = 0
 let NERDTreeDirArrows = 1
+let NERDTreeQuitOnOpen = 1
 noremap  <silent><c-w><c-n> :NERDTreeToggle<cr>
 inoremap <silent><c-w><c-n> <esc>:NERDTreeToggle<cr>
 
