@@ -141,7 +141,6 @@ nnoremap 8 :cp<cr>
 nnoremap 9 :cn<cr>
 
 command! -nargs=0 RM exe 'silent make clean | make'
-command! -nargs=0 SOurcevimrc exe 'silent so ~/.vimrc'
 
 command! -nargs=1 Grep exe "silent grep! <args>" | bo cw 10 | redr!
 
@@ -382,13 +381,4 @@ function! UnmapMappings()
 
 endfunction
 
-function! SourceWorkConfig()
-    " Add work config for current directory
-    " normally source .workconfig
-    if filereadable("./.workconfig")
-        exe 'source ' . getcwd() . '/.workconfig'
-    endif
-endfunction
-
 au VimEnter * call UnmapMappings()
-au VimEnter * call SourceWorkConfig()
