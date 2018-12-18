@@ -140,8 +140,6 @@ inoremap <silent>0 <esc>o{<esc>o}<esc>ko
 nnoremap 8 :cp<cr>
 nnoremap 9 :cn<cr>
 
-command! -nargs=0 RM exe 'silent make clean | make'
-
 command! -nargs=1 Grep exe "silent grep! <args>" | bo cw 10 | redr!
 
 """"""""""""""""""""""""""""""
@@ -336,7 +334,7 @@ let g:LargFile=2
 """"""""""""""""""""""""""""""
 if has("cscope")
     set csprg=/usr/bin/cscope
-    set csto=0
+    set csto=1
     set cst
     set nocsverb
     " add ./cscope.out
