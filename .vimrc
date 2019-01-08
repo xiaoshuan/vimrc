@@ -24,7 +24,8 @@ set magic
 set viminfo=""
 
 " Encoding
-set fencs=utf-8,euc-cn,latin1
+set fencs=utf-8,latin1
+set enc=utf-8
 
 " About search
 set hlsearch
@@ -155,7 +156,6 @@ Plugin 'CharTab'
 Plugin 'genutils'
 Plugin 'othree/xml.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'vimwiki/vimwiki'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'csliu/a.vim'
@@ -166,7 +166,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'gabrielelana/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'SirVer/ultisnips'
 Plugin 'xiaoshuan/syntax.vim'
 Plugin 'xiaoshuan/showmarks.vim'
@@ -174,20 +174,6 @@ call vundle#end()
 
 " 启动文件类型插件
 filetype plugin indent on
-
-""""""""""""""""""""""""""""""
-" vimwiki
-""""""""""""""""""""""""""""""
-let g:vimwiki_list = [{'path': '~/Documents/vimwiki/',
-    \ 'path_html': '~/Documents/vimwiki/html/'}]
-
-command! -nargs=0 Vdi exe 'VimwikiDiaryIndex'
-command! -nargs=0 Vgl exe 'VimwikiDiaryGenerateLinks'
-command! -nargs=0 Vus exe 'VimwikiUISelect'
-command! -nargs=* Vtb exe 'VimwikiTable <args>'
-command! -nargs=0 Vth exe 'Vimwiki2HTML'
-command! -nargs=0 Vah exe 'VimwikiAll2HTML'
-command! -nargs=0 Vbh exe 'Vimwiki2HTMLBrowse'
 
 """"""""""""""""""""""""""""""
 " ycm
@@ -200,7 +186,7 @@ let g:ycm_key_list_select_completion = ['<c-n>']
 let g:ycm_key_list_previous_completion = ['<c-p>']
 let g:ycm_key_invoke_completion = '<c-x><c-m>'
 let g:ycm_use_ultisnips_completer = 0
-let g:ycm_global_ycm_extra_conf = '~/Libraries/utilities/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/libs/utils/ycm/.ycm_extra_conf.py'
 let g:ycm_filetype_blacklist = {
       \ 'tex' : 1,
       \ 'text' : 1,
@@ -317,7 +303,7 @@ hi ShowMarksHLu ctermbg=Magenta ctermfg=Black
 """"""""""""""""""""""""""""""
 command! -nargs=0 UE exe 'UltiSnipsEdit'
 set runtimepath+=~/scripts/UltiSnips
-let g:UltiSnipsSnippetsDir = "~/scripts/UltiSnips/ysnips"
+let g:UltiSnipsSnippetsDir = "~/libs/scripts/UltiSnips/ysnips"
 let g:UltiSnipsSnippetDirectories = ["ysnips"]
 let g:UltiSnipsEditSplit = "context"
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -378,5 +364,4 @@ function! UnmapMappings()
     endif
 
 endfunction
-
 au VimEnter * call UnmapMappings()
