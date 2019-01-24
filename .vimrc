@@ -302,7 +302,7 @@ hi ShowMarksHLu ctermbg=Magenta ctermfg=Black
 " ultisnips
 """"""""""""""""""""""""""""""
 command! -nargs=0 UE exe 'UltiSnipsEdit'
-set runtimepath+=~/scripts/UltiSnips
+set runtimepath+=~/libs/scripts/UltiSnips
 let g:UltiSnipsSnippetsDir = "~/libs/scripts/UltiSnips/ysnips"
 let g:UltiSnipsSnippetDirectories = ["ysnips"]
 let g:UltiSnipsEditSplit = "context"
