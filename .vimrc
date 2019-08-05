@@ -138,8 +138,8 @@ map <C-l> <C-W>l
 nnoremap <silent>0 o{<esc>o}<esc>ko
 inoremap <silent>0 <esc>o{<esc>o}<esc>ko
 
-nnoremap 8 :cp<cr>
-nnoremap 9 :cn<cr>
+nnoremap <F8> :cp<cr>
+nnoremap <F9> :cn<cr>
 
 command! -nargs=1 Grep exe "silent grep! <args>" | bo cw 10 | redr!
 
@@ -164,7 +164,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 Plugin 'maxbrunsfeld/vim-yankstack'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'SirVer/ultisnips'
