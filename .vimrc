@@ -146,34 +146,28 @@ command! -nargs=1 Grep exe "silent grep! <args>" | bo cw 10 | redr!
 """"""""""""""""""""""""""""""
 " Vundle
 """"""""""""""""""""""""""""""
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" Script list
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'CharTab'
-Plugin 'genutils'
-Plugin 'othree/xml.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'csliu/a.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ycm-core/YouCompleteMe'
-Plugin 'maxbrunsfeld/vim-yankstack'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'SirVer/ultisnips'
-Plugin 'xiaoshuan/syntax.vim'
-Plugin 'xiaoshuan/showmarks.vim'
-call vundle#end()
+Plug 'vim-scripts/CharTab'
+Plug 'vim-scripts/genutils'
+Plug 'othree/xml.vim'
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-airline'
+Plug 'csliu/a.vim'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'plasticboy/vim-markdown'
+Plug 'SirVer/ultisnips'
+Plug 'xiaoshuan/syntax.vim'
+Plug 'xiaoshuan/showmarks.vim'
 
-" 启动文件类型插件
-filetype plugin indent on
+call plug#end()
 
 """"""""""""""""""""""""""""""
 " ycm
