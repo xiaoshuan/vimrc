@@ -144,7 +144,7 @@ nnoremap <F9> :cn<cr>
 command! -nargs=1 Grep exe "silent grep! <args>" | bo cw 10 | redr!
 
 """"""""""""""""""""""""""""""
-" Vundle
+" Vim-Plug
 """"""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
@@ -180,7 +180,7 @@ let g:ycm_key_list_select_completion = ['<c-n>']
 let g:ycm_key_list_previous_completion = ['<c-p>']
 let g:ycm_key_invoke_completion = '<c-x><c-m>'
 let g:ycm_use_ultisnips_completer = 0
-let g:ycm_global_ycm_extra_conf = '~/libs/utils/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/Documents/plugins/ycm/.ycm_extra_conf.py'
 let g:ycm_filetype_blacklist = {
       \ 'tex' : 1,
       \ 'text' : 1,
@@ -296,8 +296,8 @@ hi ShowMarksHLu ctermbg=Magenta ctermfg=Black
 " ultisnips
 """"""""""""""""""""""""""""""
 command! -nargs=0 UE exe 'UltiSnipsEdit'
-set runtimepath+=~/libs/scripts/UltiSnips
-let g:UltiSnipsSnippetsDir = "~/libs/scripts/UltiSnips/ysnips"
+set runtimepath+=~/Documents/plugins
+let g:UltiSnipsSnippetsDir = "~/Documents/plugins/ysnips"
 let g:UltiSnipsSnippetDirectories = ["ysnips"]
 let g:UltiSnipsEditSplit = "context"
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -359,3 +359,4 @@ function! UnmapMappings()
 
 endfunction
 au VimEnter * call UnmapMappings()
+
