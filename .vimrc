@@ -215,12 +215,6 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
 """"""""""""""""""""""""""""""
-" yank stack
-""""""""""""""""""""""""""""""
-nmap p     <Plug>yankstack_substitute_older_paste
-nmap <s-p> <Plug>yankstack_substitute_newer_paste
-
-""""""""""""""""""""""""""""""
 " Tabular
 """"""""""""""""""""""""""""""
 let g:no_default_tabular_maps = 0
@@ -233,7 +227,7 @@ command! -nargs=0 -range TD exe '<line1>,<line2>Tab /='
 """""""""""""""""""""""""""""""""""""""""
 nmap <leader>ca <plug>NERDCommenterAppend
 nmap <leader>cA <plug>NERDCommenterAltDelims
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """""""""""""""""""""""""""""""""""""""""
 " ctags
