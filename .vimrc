@@ -260,7 +260,7 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeWinPos = "right"
 let NERDTreeHighlightCursorline = 0
 let NERDTreeDirArrows = 1
-let NERDTreeQuitOnOpen = 1
+let NERDTreeQuitOnOpen = 0
 noremap  <silent><c-w><c-n> :NERDTreeToggle<cr>
 inoremap <silent><c-w><c-n> <esc>:NERDTreeToggle<cr>
 
