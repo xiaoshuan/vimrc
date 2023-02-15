@@ -201,10 +201,6 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtHistory(-1)':       [''],
   \ 'PrtHistory(1)':        [''],
   \ }
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(a|so|o|d)$',
-  \ }
 
 """"""""""""""""""""""""""""""
 " airline
