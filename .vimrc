@@ -194,13 +194,21 @@ nnoremap <leader>jd :YcmCompleter GoTo<CR>
 """"""""""""""""""""""""""""""
 let g:ctrlp_map = '<leader>cp'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_regexp = 1
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_lazy_update = 1
 let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:10,results:10'
 let g:ctrlp_prompt_mappings = {
   \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
   \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
   \ 'PrtHistory(-1)':       [''],
   \ 'PrtHistory(1)':        [''],
-  \ }
+\ }
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+\ }
 
 """"""""""""""""""""""""""""""
 " airline
