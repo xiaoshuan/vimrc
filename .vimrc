@@ -152,9 +152,11 @@ Plug 'vim-scripts/CharTab'
 Plug 'vim-scripts/genutils'
 Plug 'othree/xml.vim'
 Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'csliu/a.vim'
+Plug 'luochen1990/rainbow'
+Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/LeaderF'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -188,27 +190,6 @@ let g:ycm_filetype_blacklist = {
       \ }
 nnoremap <c-c><c-l> :YcmDiags<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
-
-""""""""""""""""""""""""""""""
-" CtrlP
-""""""""""""""""""""""""""""""
-let g:ctrlp_map = '<leader>cp'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_regexp = 1
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_lazy_update = 1
-let g:ctrlp_match_window = 'bottom,order:ttb,min:1,max:10,results:10'
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")':   ['<c-n>', '<down>'],
-  \ 'PrtSelectMove("k")':   ['<c-p>', '<up>'],
-  \ 'PrtHistory(-1)':       [''],
-  \ 'PrtHistory(1)':        [''],
-\ }
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
-\ }
 
 """"""""""""""""""""""""""""""
 " airline
@@ -264,7 +245,7 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeWinPos = "right"
 let NERDTreeHighlightCursorline = 0
 let NERDTreeDirArrows = 1
-let NERDTreeQuitOnOpen = 0
+let NERDTreeQuitOnOpen = 1
 noremap  <silent><c-w><c-n> :NERDTreeToggle<cr>
 inoremap <silent><c-w><c-n> <esc>:NERDTreeToggle<cr>
 
@@ -355,4 +336,10 @@ function! UnmapMappings()
 
 endfunction
 au VimEnter * call UnmapMappings()
+
+""""""""""""""""""""""""""""""
+" rainbow
+""""""""""""""""""""""""""""""
+let g:rainbow_active = 1
+
 
