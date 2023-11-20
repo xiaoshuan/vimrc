@@ -191,6 +191,8 @@ let g:ycm_filetype_blacklist = {
 nnoremap <c-c><c-l> :YcmDiags<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
+nnoremap <leader>cp :LeaderfFile<CR>
+
 """"""""""""""""""""""""""""""
 " airline
 """"""""""""""""""""""""""""""
@@ -338,8 +340,12 @@ endfunction
 au VimEnter * call UnmapMappings()
 
 """"""""""""""""""""""""""""""
-" rainbow
+" Rainbow
 """"""""""""""""""""""""""""""
 let g:rainbow_active = 1
 
+""""""""""""""""""""""""""""""
+" LeaderF
+""""""""""""""""""""""""""""""
+nnoremap <leader>cp :LeaderfFile<CR>
 
