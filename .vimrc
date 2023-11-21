@@ -218,7 +218,7 @@ au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 """""""""""""""""""""""""""""""""""""""""
 " ctags
 """""""""""""""""""""""""""""""""""""""""
-map <silent><F12> :!ctags -R --c++-kinds=+p --fields=+iaSl --extra=+q<cr>
+map <silent><F12> :!ctags -R --kinds-C++=+ALcdefghlmstv --fields=+iaSl --extras=+q<cr>
 
 " add ./tags
 if filereadable('tags')
