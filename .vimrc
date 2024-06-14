@@ -88,7 +88,7 @@ set expandtab
 set shiftwidth=4
 set autoindent
 set cindent
-set nowrap
+set wrap
 
 " Show line number
 set number
@@ -190,8 +190,6 @@ let g:ycm_filetype_blacklist = {
       \ }
 nnoremap <c-c><c-l> :YcmDiags<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
-
-nnoremap <leader>cp :LeaderfFile<CR>
 
 """"""""""""""""""""""""""""""
 " airline
@@ -343,9 +341,4 @@ au VimEnter * call UnmapMappings()
 " Rainbow
 """"""""""""""""""""""""""""""
 let g:rainbow_active = 1
-
-""""""""""""""""""""""""""""""
-" LeaderF
-""""""""""""""""""""""""""""""
-nnoremap <leader>cp :LeaderfFile<CR>
 
